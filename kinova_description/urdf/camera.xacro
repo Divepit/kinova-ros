@@ -55,37 +55,46 @@
             </plugin>
         </sensor> -->
 
-        <sensor name="depth_camera" type="camera">
-            <always_on>true</always_on>
-            <visualize>false</visualize>
-            <update_rate>5</update_rate>
-            <camera name="camera">
-            <horizontal_fov>1.02974</horizontal_fov>
+    <sensor name="world" type="depth">
+        <!-- openni plugin has the x pointing towards the scene, so rotate to have z -->
+        <!--pose>0.0 0.0 1.0 0.0 -1.5708 1.5708</pose -->
+        <pose> 0 0 0 0 0 0 </pose>
+        <camera>
+            <horizontal_fov>0.74839718</horizontal_fov>
             <image>
-                <width>640</width>
-                <height>480</height>
-                <format>R8G8B8</format>
+                <width>1280</width>
+                <height>1024</height>
+                <format>L_INT8</format>
             </image>
             <clip>
-                <near>0.02</near>
-                <far>10</far>
+                <near>0.01</near>
+                <far>100.0</far>
             </clip>
             <noise>
                 <type>gaussian</type>
-                <!-- Noise is sampled independently per pixel on each frame.
-                    That pixel's noise value is added to each of its color
-                    channels, which at that point lie in the range [0,1]. -->
-                <mean>0.0</mean>
-                <stddev>0.007</stddev>
+                <mean>0.5</mean>
+                <stddev>1.0</stddev>
             </noise>
-            </camera>
-            <plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
-            <camera_name>depth_camera</camera_name>
-            <frame_name>camera_depth_frame</frame_name>
-            <hack_baseline>0</hack_baseline>
-            <min_depth>0.001</min_depth>
-            </plugin>
-        </sensor>
+        </camera>
+        <plugin name="kinect_plugin" filename="libgazebo_ros_openni_kinect.so">
+            <baseline>0.1</baseline>
+            <alwaysOn>true</alwaysOn>
+            <!-- Keep this zero, update_rate in the parent <sensor> tag
+            will control the frame rate. -->
+            <updateRate>0.0</updateRate>
+            <cameraName>kinect_test</cameraName>
+            <imageTopicName>/3d_image/image_raw</imageTopicName>
+            <cameraInfoTopicName>/3d_image/camera_info</cameraInfoTopicName>
+            <depthImageTopicName>/3d_image/image_raw_depth</depthImageTopicName>
+            <depthImageInfoTopicName>/3d_image/camera_info</depthImageInfoTopicName>
+            <pointCloudTopicName>/3d_image/3d_cloud</pointCloudTopicName>
+            <frameName>camera_link_optical</frameName>
+            <pointCloudCutoff>0.5</pointCloudCutoff>
+            <pointCloudCutoffMax>2.0</pointCloudCutoffMax>
+        </plugin>
+        <always_on>true</always_on>
+        <update_rate>1.0</update_rate>
+    </sensor>
 
 
 
