@@ -95,9 +95,6 @@
     <arg name="description_name" value="$(arg description_name)"/>
   </include>
 
-  <!-- launch vision node -->
-  <include file="$(find cvnode)/launch/cameranode.launch"/>
-
   <!-- rqt launch file -->
   <include if="$(arg rqt)" file="$(find kinova_control)/launch/kinova_rqt.launch">
     <arg name="kinova_robotType" value="$(arg kinova_robotType)"/>
