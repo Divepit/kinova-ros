@@ -12,7 +12,7 @@
   <group unless="$(arg use_trajectory_controller)">
     <group unless="$(arg is7dof)">
       <!-- load the joint by joint position controllers -->  
-      <node launch-prefix="bash -c 'sleep 10; $0 $@'" name="$(arg kinova_robotName)_joints_controller" pkg="controller_manager" type="spawner" respawn="false"
+      <node name="$(arg kinova_robotName)_joints_controller" pkg="controller_manager" type="spawner" respawn="false"
         output="screen" ns="$(arg kinova_robotName)" unless="$(arg has2finger)"
        args="joint_1_position_controller joint_2_position_controller  
                joint_3_position_controller joint_4_position_controller
@@ -21,7 +21,7 @@
                finger_3_position_controller finger_tip_1_position_controller
                finger_tip_2_position_controller finger_tip_3_position_controller
                joint_state_controller"/> 
-      <node launch-prefix="bash -c 'sleep 10; $0 $@'" name="$(arg kinova_robotName)_joints_controller" pkg="controller_manager" type="spawner" respawn="false"
+      <node name="$(arg kinova_robotName)_joints_controller" pkg="controller_manager" type="spawner" respawn="false"
         output="screen" ns="$(arg kinova_robotName)" if="$(arg has2finger)"
        args="joint_1_position_controller joint_2_position_controller  
                joint_3_position_controller joint_4_position_controller
@@ -32,7 +32,7 @@
     </group>
     <group if="$(arg is7dof)">
       <!-- load the joint by joint position controllers -->  
-      <node launch-prefix="bash -c 'sleep 10; $0 $@'" name="$(arg kinova_robotName)_joints_controller" pkg="controller_manager" type="spawner" respawn="false"
+      <node name="$(arg kinova_robotName)_joints_controller" pkg="controller_manager" type="spawner" respawn="false"
         output="screen" ns="$(arg kinova_robotName)" unless="$(arg has2finger)"
        args="joint_1_position_controller joint_2_position_controller  
                joint_3_position_controller joint_4_position_controller
@@ -41,7 +41,7 @@
                finger_3_position_controller finger_tip_1_position_controller
                finger_tip_2_position_controller finger_tip_3_position_controller
                joint_state_controller"/> 
-      <node launch-prefix="bash -c 'sleep 10; $0 $@'" name="$(arg kinova_robotName)_joints_controller" pkg="controller_manager" type="spawner" respawn="false"
+      <node name="$(arg kinova_robotName)_joints_controller" pkg="controller_manager" type="spawner" respawn="false"
         output="screen" ns="$(arg kinova_robotName)" if="$(arg has2finger)"
        args="joint_1_position_controller joint_2_position_controller  
                joint_3_position_controller joint_4_position_controller
@@ -55,7 +55,7 @@
 
   <group if="$(arg use_trajectory_controller)">
     <!-- Effort Joint trajectory controller-->
-    <node launch-prefix="bash -c 'sleep 10; $0 $@'" name="$(arg kinova_robotName)_trajectory_controller" pkg="controller_manager" type="spawner" 
+    <node name="$(arg kinova_robotName)_trajectory_controller" pkg="controller_manager" type="spawner" 
       output="screen" ns="$(arg kinova_robotName)" unless="$(arg has2finger)"
       args="effort_joint_trajectory_controller
       effort_finger_trajectory_controller    
@@ -63,7 +63,7 @@
       finger_tip_2_position_controller 
       finger_tip_3_position_controller
       joint_state_controller"/>
-    <node launch-prefix="bash -c 'sleep 10; $0 $@'" name="$(arg kinova_robotName)_trajectory_controller" pkg="controller_manager" type="spawner" 
+    <node name="$(arg kinova_robotName)_trajectory_controller" pkg="controller_manager" type="spawner" 
       output="screen" ns="$(arg kinova_robotName)" if="$(arg has2finger)"
       args="effort_joint_trajectory_controller
       effort_finger_trajectory_controller    
@@ -73,13 +73,13 @@
   </group>
 
   <!-- convert joint states to TF transforms for rviz, etc -->
-  <node launch-prefix="bash -c 'sleep 10; $0 $@'" name="$(arg kinova_robotName)_robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+  <node name="$(arg kinova_robotName)_robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
         respawn="true" output="screen">
     <remap from="/joint_states" to="/$(arg kinova_robotName)/joint_states"/>
     <remap from="robot_description" to="$(arg description_name)"/>
   </node>
   
-  <node launch-prefix="bash -c 'sleep 10; $0 $@'" name="command_robot_home_pose" pkg="kinova_control" type="move_robot.py"
+  <node name="command_robot_home_pose" pkg="kinova_control" type="move_robot.py"
         respawn="false" output="screen" args="$(arg kinova_robotType)">       
   </node>
  
