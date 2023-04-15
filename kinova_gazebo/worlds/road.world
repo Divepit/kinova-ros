@@ -31,8 +31,8 @@
       <static>true</static>
     </model>
 
-    <!-- Add unit_box model -->
-    <model name="unit_box">
+    <!-- Add target model -->
+    <model name="target_sphere">
       <pose>0 0 1 0 0 0</pose>
       <link name="link">
         <inertial>
@@ -50,21 +50,54 @@
         <self_collide>false</self_collide>
         <collision name="collision">
           <geometry>
-            <box>
-              <size>0.1 0.1 0.1</size>
-            </box>
+            <sphere>
+              <radius>0.05</radius>
+            </sphere>
           </geometry>
         </collision>
         <visual name="visual">
           <geometry>
-            <box>
-              <size>0.1 0.1 0.1</size>
-            </box>
+             <sphere>
+              <radius>0.05</radius>
+            </sphere>
           </geometry>
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+
+        <!-- Add obstacle model -->
+    <model name="obstacle_1">
+      <pose>0 0 1 0 0 0</pose>
+      <link name="link">
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.16667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.16667</iyy>
+            <iyz>0</iyz>
+            <izz>0.16667</izz>
+          </inertia>
+        </inertial>
+        <gravity>false</gravity>
+        <visual name="visual">
+          <geometry>
+             <sphere>
+              <radius>0.05</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Red</name>
             </script>
           </material>
         </visual>
