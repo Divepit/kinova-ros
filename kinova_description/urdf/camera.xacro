@@ -16,6 +16,11 @@
                 <color rgba= "1 0 0 1"/>
             </material>
         </visual>
+        <collision>
+            <geometry>
+                <box size="0.010 0.03 0.03"/>
+            </geometry>
+        </collision>
     </link>
 
 
