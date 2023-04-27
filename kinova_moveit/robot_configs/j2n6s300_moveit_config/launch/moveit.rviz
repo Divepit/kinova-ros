@@ -11,6 +11,8 @@ Panels:
         - /MotionPlanning1/Planning Metrics1
         - /DepthCloud1/Auto Size1
         - /Marker1
+        - /Marker2
+        - /Marker3
       Splitter Ratio: 0.7425600290298462
     Tree Height: 250
   - Class: rviz/Help
@@ -375,6 +377,22 @@ Visualization Manager:
         voxel_dome: true
       Queue Size: 100
       Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /obstacle_marker
+      Name: Marker
+      Namespaces:
+        "": true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /target_marker
+      Name: Marker
+      Namespaces:
+        "": true
+      Queue Size: 100
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -391,7 +409,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 3.9793038368225098
+      Distance: 14.082558631896973
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -399,17 +417,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -0.0633704662322998
-        Y: 0.48747020959854126
-        Z: 6.407504997696378e-07
+        X: -0.022415757179260254
+        Y: -0.09927910566329956
+        Z: -1.8626446944836061e-06
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.33020299673080444
+      Pitch: 0.16020406782627106
       Target Frame: root
-      Yaw: 2.460360527038574
+      Yaw: 0.00536001194268465
     Saved: ~
 Window Geometry:
   Depth Image:
