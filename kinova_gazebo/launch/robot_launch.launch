@@ -15,6 +15,7 @@
   <arg name="description_name" default="robot_description"/> <!-- allows remapping of robot_description into a namespace -->
 
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <env name="GAZEBO_MODEL_PATH" value="$(find kinova_gazebo)/fuel_models"/>
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find kinova_gazebo)/worlds/road.world"/>
     <arg name="debug" value="$(arg debug)" />

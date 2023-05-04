@@ -62,7 +62,7 @@
             </plugin>
         </sensor> -->
 
-    <sensor name="world" type="depth">
+    <sensor name="root" type="depth">
         <!-- openni plugin has the x pointing towards the scene, so rotate to have z -->
         <pose>0.0 0.0 1.0 0.0 -1.5708 1.5708</pose>
         <!-- <pose> 0 0 0 0 0 0 </pose> -->
