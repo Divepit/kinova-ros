@@ -1,7 +1,7 @@
-<sdf version="1.7">
-  <world name="world">
+<sdf version='1.7'>
+  <world name='world'>
     <gravity>0 0 -9.8</gravity>
-    <physics name="default_physics" default="0" type="ode">
+    <physics name='default_physics' default='0' type='ode'>
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>1000</real_time_update_rate>
@@ -11,7 +11,7 @@
       <background>0.4 0.4 0.4 1</background>
       <shadows>0</shadows>
     </scene>
-    <light name="sun" type="directional">
+    <light name='sun' type='directional'>
       <cast_shadows>1</cast_shadows>
       <pose>0 0 10 0 -0 0</pose>
       <diffuse>0.8 0.8 0.8 1</diffuse>
@@ -40,7 +40,7 @@
               <size>4 7</size>
             </plane>
 		      </geometry>
-		      <pose>1.25 0.25 -0.75 0 0 0</pose>
+		      <pose>2 2.5 -0.05 0 0 0</pose>
 		    </collision>
 		    <visual name="floor_visual">
 		      <geometry>
@@ -48,7 +48,7 @@
 			  <size>4 7 0.1</size>
 			</box>
 		      </geometry>
-		      <pose>1.25 0.25 -0.75 0 0 0</pose>
+		      <pose>2 2.5 -0.05 0 0 0</pose>
 		      <material>
             <script>
                 <uri>file://media/materials/scripts/gazebo.material</uri>
@@ -59,60 +59,40 @@
 		  </link>
 	  </model>
 
-    <model name="TrolleyBedPatient_1">
-      <frame name="TrolleyBedPatient::__model__" attached_to="TrolleyBedPatient::body">
-        <pose relative_to="__model__">1.83202 2.2612 0 0 -0 0</pose>
+    <model name='TrolleyBedPatient_1'>
+      <frame name='TrolleyBedPatient::__model__' attached_to='TrolleyBedPatient::body'>
+        <pose relative_to='__model__'>1.83202 2.2612 0 0 -0 0</pose>
       </frame>
       <static>1</static>
-      <link name="TrolleyBedPatient::body">
-        <pose relative_to="TrolleyBedPatient::__model__">-0.45 -2.25 -0.7 0 -0 0</pose>
-        <visual name="visual">
+      <link name='TrolleyBedPatient::body'>
+        <pose relative_to='TrolleyBedPatient::__model__'>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
           <geometry>
             <mesh>
               <uri>model://TrolleyBedPatient/meshes/TrolleyBedPatient.obj</uri>
             </mesh>
           </geometry>
         </visual>
-        <collision name="collision">
-          <geometry>
-            <mesh>
-              <uri>model://TrolleyBedPatient/meshes/TrolleyBedPatient.obj</uri>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode />
-            </contact>
-            <bounce />
-            <friction>
-              <torsional>
-                <ode />
-              </torsional>
-              <ode />
-            </friction>
-          </surface>
-        </collision>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
     </model>
-    <model name="Scrubs_6">
-      <frame name="Scrubs::__model__" attached_to="Scrubs::body">
-        <pose relative_to="__model__">1.29468 3.4093 0 0 0 -1.51066</pose>
+    <model name='Scrubs_6'>
+      <frame name='Scrubs::__model__' attached_to='Scrubs::body'>
+        <pose relative_to='__model__'>1.29468 3.4093 0 0 0 -1.51066</pose>
       </frame>
       <static>1</static>
-      <link name="Scrubs::body">
-        <pose relative_to="Scrubs::__model__">-0.45 -2.25 -0.7 0 -0 0</pose>
-        <visual name="visual">
+      <link name='Scrubs::body'>
+        <pose relative_to='Scrubs::__model__'>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
           <geometry>
             <mesh>
               <uri>model://Scrubs/meshes/scrubs.obj</uri>
             </mesh>
           </geometry>
         </visual>
-        <collision name="collision">
+        <collision name='collision'>
           <geometry>
             <mesh>
               <uri>model://Scrubs/meshes/Scrubs_Col.obj</uri>
@@ -121,14 +101,14 @@
           <max_contacts>10</max_contacts>
           <surface>
             <contact>
-              <ode />
+              <ode/>
             </contact>
-            <bounce />
+            <bounce/>
             <friction>
               <torsional>
-                <ode />
+                <ode/>
               </torsional>
-              <ode />
+              <ode/>
             </friction>
           </surface>
         </collision>
@@ -137,21 +117,21 @@
         <kinematic>0</kinematic>
       </link>
     </model>
-    <model name="Scrubs_5">
-      <frame name="Scrubs::__model__" attached_to="Scrubs::body">
-        <pose relative_to="__model__">0.66657 1.3733 0 -0.002221 -0.006608 -1.24025</pose>
+    <model name='Scrubs_5'>
+      <frame name='Scrubs::__model__' attached_to='Scrubs::body'>
+        <pose relative_to='__model__'>0.66657 1.3733 0 -0.002221 -0.006608 -1.24025</pose>
       </frame>
       <static>1</static>
-      <link name="Scrubs::body">
-        <pose relative_to="Scrubs::__model__">-0.45 -2.25 -0.7 0 -0 0</pose>
-        <visual name="visual">
+      <link name='Scrubs::body'>
+        <pose relative_to='Scrubs::__model__'>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
           <geometry>
             <mesh>
               <uri>model://Scrubs/meshes/scrubs.obj</uri>
             </mesh>
           </geometry>
         </visual>
-        <collision name="collision">
+        <collision name='collision'>
           <geometry>
             <mesh>
               <uri>model://Scrubs/meshes/Scrubs_Col.obj</uri>
@@ -160,14 +140,14 @@
           <max_contacts>10</max_contacts>
           <surface>
             <contact>
-              <ode />
+              <ode/>
             </contact>
-            <bounce />
+            <bounce/>
             <friction>
               <torsional>
-                <ode />
+                <ode/>
               </torsional>
-              <ode />
+              <ode/>
             </friction>
           </surface>
         </collision>
@@ -176,21 +156,21 @@
         <kinematic>0</kinematic>
       </link>
     </model>
-    <model name="Scrubs_4">
-      <frame name="Scrubs::__model__" attached_to="Scrubs::body">
-        <pose relative_to="__model__">2.93616 1.2252 0 0 -0 1.62572</pose>
+    <model name='Scrubs_4'>
+      <frame name='Scrubs::__model__' attached_to='Scrubs::body'>
+        <pose relative_to='__model__'>2.93616 1.2252 0 0 -0 1.62572</pose>
       </frame>
       <static>1</static>
-      <link name="Scrubs::body">
-        <pose relative_to="Scrubs::__model__">-0.45 -2.25 -0.7 0 -0 0</pose>
-        <visual name="visual">
+      <link name='Scrubs::body'>
+        <pose relative_to='Scrubs::__model__'>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
           <geometry>
             <mesh>
               <uri>model://Scrubs/meshes/scrubs.obj</uri>
             </mesh>
           </geometry>
         </visual>
-        <collision name="collision">
+        <collision name='collision'>
           <geometry>
             <mesh>
               <uri>model://Scrubs/meshes/Scrubs_Col.obj</uri>
@@ -199,14 +179,14 @@
           <max_contacts>10</max_contacts>
           <surface>
             <contact>
-              <ode />
+              <ode/>
             </contact>
-            <bounce />
+            <bounce/>
             <friction>
               <torsional>
-                <ode />
+                <ode/>
               </torsional>
-              <ode />
+              <ode/>
             </friction>
           </surface>
         </collision>
@@ -215,21 +195,21 @@
         <kinematic>0</kinematic>
       </link>
     </model>
-    <model name="AnesthesiaMachine_1">
-      <frame name="AnesthesiaMachine::__model__" attached_to="AnesthesiaMachine::body">
-        <pose relative_to="__model__">1.28478 4.1127 0 0 0 -3.12971</pose>
+    <model name='AnesthesiaMachine_1'>
+      <frame name='AnesthesiaMachine::__model__' attached_to='AnesthesiaMachine::body'>
+        <pose relative_to='__model__'>1.28478 4.1127 0 0 0 -3.12971</pose>
       </frame>
       <static>1</static>
-      <link name="AnesthesiaMachine::body">
-        <pose relative_to="AnesthesiaMachine::__model__">-0.45 -2.25 -0.7 0 -0 0</pose>
-        <visual name="visual">
+      <link name='AnesthesiaMachine::body'>
+        <pose relative_to='AnesthesiaMachine::__model__'>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
           <geometry>
             <mesh>
               <uri>model://AnesthesiaMachine/meshes/AnesthesiaMachine.obj</uri>
             </mesh>
           </geometry>
         </visual>
-        <collision name="collision">
+        <collision name='collision'>
           <geometry>
             <mesh>
               <uri>model://AnesthesiaMachine/meshes/AnesthesiaMachine_Col.obj</uri>
@@ -238,14 +218,14 @@
           <max_contacts>10</max_contacts>
           <surface>
             <contact>
-              <ode />
+              <ode/>
             </contact>
-            <bounce />
+            <bounce/>
             <friction>
               <torsional>
-                <ode />
+                <ode/>
               </torsional>
-              <ode />
+              <ode/>
             </friction>
           </surface>
         </collision>
@@ -254,13 +234,13 @@
         <kinematic>0</kinematic>
       </link>
     </model>
-    <model name="IVStand_2">
-      <frame name="IVStand::__model__" attached_to="IVStand::body">
-        <pose relative_to="__model__">0.30593 3.2447 0 0 -0 0</pose>
+    <model name='IVStand_2'>
+      <frame name='IVStand::__model__' attached_to='IVStand::body'>
+        <pose relative_to='__model__'>0.30593 3.2447 0 0 -0 0</pose>
       </frame>
-      <link name="IVStand::body">
-        <pose relative_to="IVStand::__model__">-0.45 -2.25 -0.7 0 -0 0</pose>
-        <visual name="visual">
+      <link name='IVStand::body'>
+        <pose relative_to='IVStand::__model__'>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
           <geometry>
             <mesh>
               <uri>model://IVStand/meshes/IVStand.obj</uri>
@@ -268,7 +248,7 @@
             </mesh>
           </geometry>
         </visual>
-        <collision name="collision">
+        <collision name='collision'>
           <geometry>
             <mesh>
               <uri>model://IVStand/meshes/IVStand.obj</uri>
@@ -278,14 +258,14 @@
           <max_contacts>10</max_contacts>
           <surface>
             <contact>
-              <ode />
+              <ode/>
             </contact>
-            <bounce />
+            <bounce/>
             <friction>
               <torsional>
-                <ode />
+                <ode/>
               </torsional>
-              <ode />
+              <ode/>
             </friction>
           </surface>
         </collision>
@@ -295,20 +275,20 @@
       </link>
       <static>1</static>
     </model>
-    <model name="StorageRack_2">
-      <frame name="StorageRack::__model__" attached_to="StorageRack::link">
-        <pose relative_to="__model__">0.69866 5.4178 -8e-06 0 4e-06 0</pose>
+    <model name='StorageRack_2'>
+      <frame name='StorageRack::__model__' attached_to='StorageRack::link'>
+        <pose relative_to='__model__'>0.69866 5.4178 -8e-06 0 4e-06 0</pose>
       </frame>
-      <link name="StorageRack::link">
-        <pose relative_to="StorageRack::__model__">-0.45 -2.25 -0.7 0 -0 0</pose>
-        <visual name="visual">
+      <link name='StorageRack::link'>
+        <pose relative_to='StorageRack::__model__'>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
           <geometry>
             <mesh>
               <uri>model://StorageRack/meshes/StorageRack.obj</uri>
             </mesh>
           </geometry>
         </visual>
-        <collision name="collision">
+        <collision name='collision'>
           <geometry>
             <mesh>
               <uri>model://StorageRack/meshes/StorageRack.obj</uri>
@@ -317,14 +297,14 @@
           <max_contacts>10</max_contacts>
           <surface>
             <contact>
-              <ode />
+              <ode/>
             </contact>
-            <bounce />
+            <bounce/>
             <friction>
               <torsional>
-                <ode />
+                <ode/>
               </torsional>
-              <ode />
+              <ode/>
             </friction>
           </surface>
         </collision>
@@ -334,21 +314,21 @@
       </link>
       <static>1</static>
     </model>
-    <model name="SurgicalTrolley_2">
-      <frame name="SurgicalTrolley::__model__" attached_to="SurgicalTrolley::body">
-        <pose relative_to="__model__">2.41142 5.2085 0 0 0 -1.58175</pose>
+    <model name='SurgicalTrolley_2'>
+      <frame name='SurgicalTrolley::__model__' attached_to='SurgicalTrolley::body'>
+        <pose relative_to='__model__'>0.45 2.25 0 0 0 -1.5708</pose>
       </frame>
       <static>1</static>
-      <link name="SurgicalTrolley::body">
-        <pose relative_to="SurgicalTrolley::__model__">0 0 -0.71 0 -0 0</pose>
-        <visual name="visual">
+      <link name='SurgicalTrolley::body'>
+        <pose relative_to='SurgicalTrolley::__model__'>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
           <geometry>
             <mesh>
               <uri>model://SurgicalTrolley/meshes/trolley.obj</uri>
             </mesh>
           </geometry>
         </visual>
-        <collision name="collision">
+        <collision name='collision'>
           <geometry>
             <mesh>
               <uri>model://SurgicalTrolley/meshes/trolley.obj</uri>
@@ -357,14 +337,14 @@
           <max_contacts>10</max_contacts>
           <surface>
             <contact>
-              <ode />
+              <ode/>
             </contact>
-            <bounce />
+            <bounce/>
             <friction>
               <torsional>
-                <ode />
+                <ode/>
               </torsional>
-              <ode />
+              <ode/>
             </friction>
           </surface>
         </collision>
@@ -373,21 +353,21 @@
         <kinematic>0</kinematic>
       </link>
     </model>
-    <model name="InstrumentCart1_3">
-      <frame name="InstrumentCart1::__model__" attached_to="InstrumentCart1::body">
-        <pose relative_to="__model__">1.83539 -0.5879 0 0 -0 0</pose>
+    <model name='InstrumentCart1_3'>
+      <frame name='InstrumentCart1::__model__' attached_to='InstrumentCart1::body'>
+        <pose relative_to='__model__'>1.83539 -0.5879 0 0 -0 0</pose>
       </frame>
       <static>1</static>
-      <link name="InstrumentCart1::body">
-        <pose relative_to="InstrumentCart1::__model__">-0.45 -2.25 -0.7 0 -0 0</pose>
-        <visual name="visual">
+      <link name='InstrumentCart1::body'>
+        <pose relative_to='InstrumentCart1::__model__'>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
           <geometry>
             <mesh>
               <uri>model://InstrumentCart1/meshes/InstrumentCart1.obj</uri>
             </mesh>
           </geometry>
         </visual>
-        <collision name="collision">
+        <collision name='collision'>
           <geometry>
             <mesh>
               <uri>model://InstrumentCart1/meshes/InstrumentCart1.obj</uri>
@@ -396,14 +376,14 @@
           <max_contacts>10</max_contacts>
           <surface>
             <contact>
-              <ode />
+              <ode/>
             </contact>
-            <bounce />
+            <bounce/>
             <friction>
               <torsional>
-                <ode />
+                <ode/>
               </torsional>
-              <ode />
+              <ode/>
             </friction>
           </surface>
         </collision>
@@ -412,21 +392,21 @@
         <kinematic>0</kinematic>
       </link>
     </model>
-    <model name="InstrumentCart2_3">
-      <frame name="InstrumentCart2::__model__" attached_to="InstrumentCart2::body">
-        <pose relative_to="__model__">2.86954 -0.7436 0 0 0 -0.002595</pose>
+    <model name='InstrumentCart2_3'>
+      <frame name='InstrumentCart2::__model__' attached_to='InstrumentCart2::body'>
+        <pose relative_to='__model__'>2.86954 -0.7436 0 0 0 -0.002595</pose>
       </frame>
       <static>1</static>
-      <link name="InstrumentCart2::body">
-        <pose relative_to="InstrumentCart2::__model__">-0.45 -2.25 -0.7 0 -0 0</pose>
-        <visual name="visual">
+      <link name='InstrumentCart2::body'>
+        <pose relative_to='InstrumentCart2::__model__'>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
           <geometry>
             <mesh>
               <uri>model://InstrumentCart2/meshes/InstrumentCart2.obj</uri>
             </mesh>
           </geometry>
         </visual>
-        <collision name="collision">
+        <collision name='collision'>
           <geometry>
             <mesh>
               <uri>model://InstrumentCart2/meshes/InstrumentCart2.obj</uri>
@@ -435,14 +415,14 @@
           <max_contacts>10</max_contacts>
           <surface>
             <contact>
-              <ode />
+              <ode/>
             </contact>
-            <bounce />
+            <bounce/>
             <friction>
               <torsional>
-                <ode />
+                <ode/>
               </torsional>
-              <ode />
+              <ode/>
             </friction>
           </surface>
         </collision>
@@ -452,8 +432,8 @@
       </link>
     </model>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
-    <atmosphere type="adiabatic" />
-    <wind />
+    <atmosphere type='adiabatic'/>
+    <wind/>
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>
       <latitude_deg>0</latitude_deg>
@@ -461,106 +441,106 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <state world_name="world">
+    <state world_name='world'>
       <sim_time>54 983000000</sim_time>
       <real_time>55 325850308</real_time>
       <wall_time>1682692726 404086046</wall_time>
       <iterations>54983</iterations>
-      <model name="AnesthesiaMachine_1">
+      <model name='AnesthesiaMachine_1'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name="AnesthesiaMachine::body">
-          <pose>0.8347800000000001 1.8627000000000002 -0.7 0 0 -3.12971</pose>
+        <link name='AnesthesiaMachine::body'>
+          <pose>1.28478 4.1127 0 0 0 -3.12971</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name="IVStand_2">
+      <model name='IVStand_2'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name="IVStand::body">
-          <pose>-0.14407000000000003 0.9946999999999999 -0.7 0 -0 0</pose>
+        <link name='IVStand::body'>
+          <pose>0.30593 3.2447 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name="InstrumentCart1_3">
+      <model name='InstrumentCart1_3'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name="InstrumentCart1::body">
-          <pose>1.3853900000000001 -2.8379 -0.7 0 -0 0</pose>
+        <link name='InstrumentCart1::body'>
+          <pose>1.83539 -0.5879 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name="InstrumentCart2_3">
+      <model name='InstrumentCart2_3'>
         <pose>-0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name="InstrumentCart2::body">
-          <pose>2.41954 -2.9936 -0.7 0 0 -0.002595</pose>
+        <link name='InstrumentCart2::body'>
+          <pose>2.86954 -0.7436 0 0 0 -0.002595</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name="Scrubs_4">
+      <model name='Scrubs_4'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name="Scrubs::body">
-          <pose>2.48616 -1.0248 -0.7 0 -0 1.62572</pose>
+        <link name='Scrubs::body'>
+          <pose>2.93616 1.2252 0 0 -0 1.62572</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name="Scrubs_5">
+      <model name='Scrubs_5'>
         <pose>0 -0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name="Scrubs::body">
-          <pose>0.21656999999999998 -0.8767 -0.7 -0.002221 -0.006608 -1.24025</pose>
+        <link name='Scrubs::body'>
+          <pose>0.66657 1.3733 0 -0.002221 -0.006608 -1.24025</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name="Scrubs_6">
+      <model name='Scrubs_6'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name="Scrubs::body">
-          <pose>0.8446800000000001 1.1593 -0.7 0 0 -1.51066</pose>
+        <link name='Scrubs::body'>
+          <pose>1.29468 3.4093 0 0 0 -1.51066</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name="StorageRack_2">
+      <model name='StorageRack_2'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name="StorageRack::link">
-          <pose>0.24865999999999994 3.1677999999999997 -0.700008 0 4e-06 0</pose>
+        <link name='StorageRack::link'>
+          <pose>0.69866 5.4178 -8e-06 0 4e-06 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name="SurgicalTrolley_2">
+      <model name='SurgicalTrolley_2'>
         <pose>-0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name="SurgicalTrolley::body">
-          <pose>0 0 -0.71 0 0 -1.58175</pose>
+        <link name='SurgicalTrolley::body'>
+          <pose>0.45 2.25 0 0 0 -1.5708</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name="TrolleyBedPatient_1">
+      <model name='TrolleyBedPatient_1'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name="TrolleyBedPatient::body">
-          <pose>1.38202 0.011200000000000099 -0.7 0 -0 0</pose>
+        <link name='TrolleyBedPatient::body'>
+          <pose>1.83202 2.2612 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -603,12 +583,12 @@
 	    </link>
 	 </model>
   
-      <light name="sun">
+      <light name='sun'>
         <pose>0 0 10 0 -0 0</pose>
       </light>
     </state>
-    <gui fullscreen="0">
-      <camera name="user_camera">
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
         <pose>4.37721 11.9209 6.33908 0 0.465797 -1.91016</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
