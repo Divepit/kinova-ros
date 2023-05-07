@@ -1,5 +1,5 @@
-<?xml version='1.0' encoding='utf-8'?>
-<sdf version="1.6">
+<?xml version='1.0'?>
+<sdf version="1.5">
   	<world name="world">
   	
   	
@@ -22,7 +22,7 @@
 	      <include>
 		<uri>model://TrolleyBedPatient</uri>
 		<static>true</static>
-		<pose>1.83202 2.2612 0 0 -0 0</pose>
+		<pose>1.38202 0.0112 -0.7 0 -0 0</pose>
 	      </include>
 	    </model>
 	    
@@ -30,7 +30,7 @@
 	      <include>
 		<uri>model://Scrubs</uri>
 		<static>true</static>
-		<pose>1.29468 3.4093 0 0 0 -1.51066</pose>
+		<pose>0.84468 1.1593 -0.7 0 0 -1.51066</pose>
 	      </include>
 	    </model>
 	    
@@ -38,7 +38,7 @@
 	      <include>
 		<uri>model://Scrubs</uri>
 		<static>true</static>
-		<pose>0.66657 1.3733 0 -0.002221 -0.006608 -1.24025</pose>
+		<pose>0.21657 -0.8833 -0.7 -0.002221 -0.006608 -1.24025</pose>
 	      </include>
 	    </model>
 	    
@@ -46,7 +46,7 @@
 	      <include>
 		<uri>model://Scrubs</uri>
 		<static>true</static>
-		<pose>2.93616 1.2252 0 0 -0 1.62572</pose>
+		<pose>2.48616 -1.0352 -0.7 0 -0 1.62572</pose>
 	      </include>
 	    </model>
 	    
@@ -54,7 +54,7 @@
 	      <include>
 		<uri>model://AnesthesiaMachine</uri>
 		<static>true</static>
-		<pose>1.28478 4.1127 0 0 0 -3.12971</pose>
+		<pose>0.83478 1.8627 -0.7 0 0 -3.12971</pose>
 	      </include>
 	    </model>
 	    
@@ -63,7 +63,7 @@
 	      <include>
 		<uri>model://IVStand</uri>
 		<static>true</static>
-		<pose>0.30593 3.2447 0 0 -0 0</pose>
+		<pose>-0.15593 1.9947 -0.7 0 -0 0</pose>
 	      </include>
 	    </model>
 	    
@@ -71,7 +71,7 @@
 	      <include>
 		<uri>model://StorageRack</uri>
 		<static>true</static>
-		<pose>0.69866 5.4178 -8e-06 0 4e-06 0</pose>
+		<pose>0.24866 2.1678 -0.700008 0 4e-06 0</pose>
 	      </include>
 	    </model>
 	    
@@ -79,7 +79,7 @@
 	      <include>
 		<uri>model://SurgicalTrolley</uri>
 		<static>true</static>
-		<pose>2.411421 5.2085 0 0 0 -1.58175</pose>
+		<pose>1.961421 2.9585 -0.7 0 0 -1.58175</pose>
 	      </include>
 	    </model>
 	    
@@ -87,7 +87,7 @@
 	      <include>
 		<uri>model://InstrumentCart1</uri>
 		<static>true</static>
-		<pose>1.83539 -0.5879 0 0 -0 0</pose>
+		<pose>1.38539 -2.8379 -0.7 0 -0 0</pose>
 	      </include>
 	    </model>
 	    
@@ -95,7 +95,7 @@
 	      <include>
 		<uri>model://InstrumentCart2</uri>
 		<static>true</static>
-		<pose>2.869537 -0.7436 0 0 0 -0.002595</pose>
+		<pose>2.419537 -2.9936 -0.7 0 0 -0.002595</pose>
 	      </include>
 	    </model>
 	    
@@ -109,7 +109,7 @@
 			  <size>4 7 0.1</size>
 			</box>
 		      </geometry>
-		      <pose>2 2.5 -0.05 0 0 0</pose>
+		      <pose>1.55 0.25 -0.75 0 0 0</pose>
 		    </collision>
 		    <visual name="floor_visual">
 		      <geometry>
@@ -117,7 +117,7 @@
 			  <size>4 7 0.1</size>
 			</box>
 		      </geometry>
-		      <pose>2 2.5 -0.05 0 0 0</pose>
+		      <pose>1.55 0.25 -0.75 0 0 0</pose>
 		      <material>
 			<script>
 			  <uri>file://media/materials/scripts/gazebo.material</uri>
