@@ -4,11 +4,64 @@
   	
   	
 	    <gravity>0 0 -9.8</gravity>
-	    <physics default="0" name="default_physics" type="ode">
+
+		<!-- set type='ode' if problems -->
+		<physics name='default_physics' default='0' type='rk4'> 
+			<max_step_size>0.001</max_step_size>
+			<real_time_factor>1</real_time_factor>
+			<real_time_update_rate>1000</real_time_update_rate>
+			<ode>
+				<solver>
+				<type>quick</type>
+				<precon>none</precon>
+				<iters>50</iters>
+				<sor>1.3</sor>
+				<use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+				<friction_model>pyramid_model</friction_model>
+				<constraints>
+					<cfm>0.0</cfm>
+					<erp>0.2</erp>
+					<contact_max_correcting_vel>100.0</contact_max_correcting_vel>
+					<contact_surface_layer>0.001</contact_surface_layer>
+				</constraints>
+				<solver>
+					<type>quick</type>
+					<precon>none</precon>
+					<iters>50</iters>
+					<sor>1.3</sor>
+					<use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+					<friction_model>pyramid_model</friction_model>
+					<constraints>
+					<cfm>0.0</cfm>
+					<erp>0.2</erp>
+					<contact_max_correcting_vel>100.0</contact_max_correcting_vel>
+					<contact_surface_layer>0.001</contact_surface_layer>
+					</constraints>
+				</solver>
+				<solver_type>2</solver_type>
+				<min_step_size>0.0001</min_step_size>
+				<max_step_size>0.001</max_step_size>
+				<step_size>0.001</step_size>
+				<damping>1</damping>
+				<implicit_spring_damper>0</implicit_spring_damper>
+				<preprocess_ccd>0</preprocess_ccd>
+				<friction_cfm>0.0</friction_cfm>
+				<friction_erp>0.2</friction_erp>
+				<sor_eps>0.1</sor_eps>
+				<sor_iterations>20</sor_iterations>
+				<max_contacts>20</max_contacts>
+				<surface_layer_width>0.001</surface_layer_width>
+				<contact_max_correcting_vel>100.0</contact_max_correcting_vel>
+				</solver>
+			</ode>
+			</physics>
+
+
+	    <!-- <physics default="0" name="default_physics" type="ode">
 	      <max_step_size>0.001</max_step_size>
 	      <real_time_factor>1</real_time_factor>
 	      <real_time_update_rate>1000</real_time_update_rate>
-	    </physics>
+	    </physics> -->
 	    <scene>
 	      <ambient>0.6 0.6 0.6 1</ambient>
 	      <background>0.4 0.4 0.4 1</background>
