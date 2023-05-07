@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.6">
+  	<world name="world">
+  	
+  	
+	    <gravity>0 0 -9.8</gravity>
+	    <physics default="0" name="default_physics" type="ode">
+	      <max_step_size>0.001</max_step_size>
+	      <real_time_factor>1</real_time_factor>
+	      <real_time_update_rate>1000</real_time_update_rate>
+	    </physics>
+	    <scene>
+	      <ambient>0.6 0.6 0.6 1</ambient>
+	      <background>0.4 0.4 0.4 1</background>
+	      <shadows>false</shadows>
+	    </scene>
+	    <include>
+	      <uri>model://sun</uri>
+	    </include>
+	    
+	    <model name="TrolleyBedPatient_1">
+	      <include>
+		<uri>model://TrolleyBedPatient</uri>
+		<static>true</static>
+		<pose>1.83202 2.2612 0 0 -0 0</pose>
+	      </include>
+	    </model>
+	    
+	    <model name="Scrubs_6">
+	      <include>
+		<uri>model://Scrubs</uri>
+		<static>true</static>
+		<pose>1.29468 3.4093 0 0 0 -1.51066</pose>
+	      </include>
+	    </model>
+	    
+	    <model name="Scrubs_5">
+	      <include>
+		<uri>model://Scrubs</uri>
+		<static>true</static>
+		<pose>0.66657 1.3733 0 -0.002221 -0.006608 -1.24025</pose>
+	      </include>
+	    </model>
+	    
+	    <model name="Scrubs_4">
+	      <include>
+		<uri>model://Scrubs</uri>
+		<static>true</static>
+		<pose>2.93616 1.2252 0 0 -0 1.62572</pose>
+	      </include>
+	    </model>
+	    
+	    <model name="AnesthesiaMachine_1">
+	      <include>
+		<uri>model://AnesthesiaMachine</uri>
+		<static>true</static>
+		<pose>1.28478 4.1127 0 0 0 -3.12971</pose>
+	      </include>
+	    </model>
+	    
+	    
+	    <model name="IVStand_2">
+	      <include>
+		<uri>model://IVStand</uri>
+		<static>true</static>
+		<pose>0.30593 3.2447 0 0 -0 0</pose>
+	      </include>
+	    </model>
+	    
+	    <model name="StorageRack_2">
+	      <include>
+		<uri>model://StorageRack</uri>
+		<static>true</static>
+		<pose>0.69866 5.4178 -8e-06 0 4e-06 0</pose>
+	      </include>
+	    </model>
+	    
+	    <model name="SurgicalTrolley_2">
+	      <include>
+		<uri>model://SurgicalTrolley</uri>
+		<static>true</static>
+		<pose>2.411421 5.2085 0 0 0 -1.58175</pose>
+	      </include>
+	    </model>
+	    
+	    <model name="InstrumentCart1_3">
+	      <include>
+		<uri>model://InstrumentCart1</uri>
+		<static>true</static>
+		<pose>1.83539 -0.5879 0 0 -0 0</pose>
+	      </include>
+	    </model>
+	    
+	    <model name="InstrumentCart2_3">
+	      <include>
+		<uri>model://InstrumentCart2</uri>
+		<static>true</static>
+		<pose>2.869537 -0.7436 0 0 0 -0.002595</pose>
+	      </include>
+	    </model>
+	    
+	    
+	    <model name="floor">
+		  <static>true</static>
+		  <link name="floor_link">
+		    <collision name="floor_collision">
+		      <geometry>
+			<box>
+			  <size>4 7 0.1</size>
+			</box>
+		      </geometry>
+		      <pose>2 2.5 -0.05 0 0 0</pose>
+		    </collision>
+		    <visual name="floor_visual">
+		      <geometry>
+			<box>
+			  <size>4 7 0.1</size>
+			</box>
+		      </geometry>
+		      <pose>2 2.5 -0.05 0 0 0</pose>
+		      <material>
+			<script>
+			  <uri>file://media/materials/scripts/gazebo.material</uri>
+			  <name>Gazebo/Blue</name>
+			</script>
+		      </material>
+		    </visual>
+		  </link>
+	     </model>
+
+    
+	</world>
+</sdf>
