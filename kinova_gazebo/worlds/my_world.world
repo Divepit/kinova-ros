@@ -181,6 +181,35 @@
 		  </link>
 	     </model>
 
+
+		<model name="target_sphere">
+			<pose>0 0 1 0 0 0</pose>
+			<link name="link">
+				<gravity>false</gravity>
+				<self_collide>false</self_collide>
+				<collision name="collision">
+				<geometry>
+					<sphere>
+					<radius>0.03</radius>
+					</sphere>
+				</geometry>
+				</collision>
+				<visual name="visual">
+				<geometry>
+					<sphere>
+					<radius>0.03</radius>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+					<name>Gazebo/Blue</name>
+					</script>
+				</material>
+				</visual>
+			</link>
+		</model>
+
     
 	</world>
 </sdf>
