@@ -187,13 +187,7 @@
 			<link name="link">
 				<gravity>false</gravity>
 				<self_collide>false</self_collide>
-				<collision name="collision">
-				<geometry>
-					<sphere>
-					<radius>0.03</radius>
-					</sphere>
-				</geometry>
-				</collision>
+
 				<visual name="visual">
 				<geometry>
 					<sphere>
